@@ -128,7 +128,7 @@ st.plotly_chart(fig1, use_container_width=True)
 
 toss_decision = matches['toss_decision'].value_counts()
 
-st.header("🪙 Toss Decision Analysis")
+st.header("Toss Decision Analysis")
 
 fig2 = px.pie(
     values=toss_decision.values,
@@ -148,7 +148,7 @@ top_batsmen = deliveries.groupby(
     ascending=False
 ).head(10)
 
-st.header("🏏 Top Run Scorers")
+st.header("Top Run Scorers")
 
 fig3 = px.bar(
     x=top_batsmen.index,
@@ -198,7 +198,7 @@ wickets = deliveries[
 
 top_bowlers = wickets['bowler'].value_counts().head(10)
 
-st.header("🎯 Top Bowlers")
+st.header("Top Bowlers")
 
 fig5 = px.bar(
     x=top_bowlers.index,
@@ -215,7 +215,7 @@ st.plotly_chart(fig5, use_container_width=True)
 
 venues = matches['venue'].value_counts().head(10)
 
-st.header("🏟️ Top IPL Venues")
+st.header("Top IPL Venues")
 
 fig6 = px.bar(
     x=venues.index,
@@ -232,7 +232,7 @@ st.plotly_chart(fig6, use_container_width=True)
 
 season_matches = matches['season'].value_counts().sort_index()
 
-st.header("📅 Season Wise Matches")
+st.header("Season Wise Matches")
 
 fig7 = px.line(
     x=season_matches.index,
@@ -253,7 +253,7 @@ match_scores = deliveries.groupby(
 
 scores_array = np.array(match_scores)
 
-st.header("📈 NumPy Statistics")
+st.header("NumPy Statistics")
 
 avg_score = np.mean(scores_array)
 
@@ -277,7 +277,7 @@ c4.metric("Std Deviation", round(std_score, 2))
 # Score Distribution
 # -----------------------------------------
 
-st.header("📊 Match Score Distribution")
+st.header("Match Score Distribution")
 
 fig8 = px.histogram(
     x=scores_array,
@@ -291,7 +291,7 @@ st.plotly_chart(fig8, use_container_width=True)
 # Raw Dataset
 # -----------------------------------------
 
-st.header("📂 Raw Dataset")
+st.header("Raw Dataset")
 
 if st.checkbox("Show Matches Dataset"):
     st.dataframe(matches)
