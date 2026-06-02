@@ -39,9 +39,9 @@ os.makedirs("../data", exist_ok=True)
 # Extract ZIP File
 # -----------------------------------------
 
-zip_path = "../archive.zip"
+zip_path = "archive.zip"
 
-extract_path = "../data"
+extract_path = "data"
 
 # Extract ZIP only if CSV files do not exist
 matches_file = os.path.join(extract_path, "matches.csv")
