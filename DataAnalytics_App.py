@@ -111,7 +111,7 @@ st.dataframe(team_matches.head(10))
 
 team_wins = matches['winner'].value_counts()
 
-st.header(" Team Wins Analysis")
+st.header(" Team Wins Analysis Dashboard")
 
 fig1 = px.bar(
     x=team_wins.index,
