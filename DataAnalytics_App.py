@@ -25,7 +25,7 @@ st.set_page_config(
 # Title
 # -----------------------------------------
 
-st.title("PragyanAI - IPL Analytics Dashboard")
+st.title("Aishwarya - IPL Analytics Dashboard")
 
 st.markdown("Interactive Cricket Data Analytics using Python, NumPy, Pandas and Streamlit")
 
